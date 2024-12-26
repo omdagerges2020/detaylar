@@ -26,6 +26,10 @@ export default function Home({ params }) {
 
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return; // تجنب أي كود يعتمد على المتصفح أثناء البناء
+    }
+    
     const handleScroll = () => {
       setPageHeight(window.scrollY);
     };
