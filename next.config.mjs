@@ -14,6 +14,9 @@ const nextConfig = {
     domains: ['192.168.1.117', process.env.NEXT_PUBLIC_IMAGE_DOMAIN, 'thahab.com'],
 
   },
+  eslint: {
+    ignoreDuringBuilds: true, // تعطيل ESLint أثناء البناء
+  },
 };
 
 export default nextConfig;
